@@ -1,0 +1,5 @@
+vivo-rdflib-sparqlstore
+rdflib
+SPARQLWrapper
+keepalive
+requests
