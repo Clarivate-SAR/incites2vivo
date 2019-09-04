@@ -130,8 +130,9 @@ def process_extended(data, pubs):
 
     for doc in data:
         for k, prop in extended_fields:
-            pub_uri = pubs[doc['ISI_LOC']]
-            g.add((pub_uri, prop, Literal(doc[k])))
+            if k in doc:
+                pub_uri = pubs[doc['ISI_LOC']]
+                g.add((pub_uri, prop, Literal(doc[k])))
 
     return g
 
